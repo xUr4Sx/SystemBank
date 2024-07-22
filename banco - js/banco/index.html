@@ -1,0 +1,40 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Banco XYZ</h1>
+
+        <div class="bg-white shadow-md rounded-md p-4 mb-4">
+            <h2 class="text-xl font-semibold mb-2">Datos de Cliente</h2>
+            <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+            <p><strong>Edad:</strong> <span id="edad"></span></p>
+            <p><strong>Saldo:</strong> $<span id="saldo">****</span></p>
+            <button id="consultarBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md mt-2">Consultar Saldo</button>
+            <button id="ocultarBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md mt-2" style="display:none;">Ocultar Saldo</button>
+        </div>
+
+        <div class="bg-white shadow-md rounded-md p-4">
+            <h2 class="text-xl font-semibold mb-2">Operaciones</h2>
+            <form id="operaciones-form">
+                <div class="mb-2">
+                    <label class="block font-semibold" for="monto">Monto:</label>
+                    <input type="number" id="monto" name="monto" class="w-full p-2 border rounded-md" required>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Retirar</button>
+                <button type="button" onclick="consignar()" class="bg-green-500 text-white px-4 py-2 rounded-md">Consignar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
